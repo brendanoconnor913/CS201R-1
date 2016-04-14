@@ -19,6 +19,7 @@ int main()
     InitializeGrid( grid );
 
     grid[2][2] = 2;
+	
 
     bool done = false;
     while ( !done )
@@ -70,7 +71,7 @@ void DrawGrid( int grid[5][5] )
     {
         for ( int x = 0; x < 5; x++ )
         {
-            cout << grid[x][y] < " ";
+            cout << grid[x][y] << " ";
         }
         cout << endl;
     }
