@@ -4,14 +4,14 @@
 #include <string>
 using namespace std;
 
-int emptyIndex(float list[], int length, int index) {
+int emptyIndexFinder(float list[], int length, int index) {
 	if (list[index] == -1) {
 		return index;
 	}
 	if (index + 1 > length) {
 		return -1;
 	}
-	return emptyIndex(list,length, index + 1);
+	return emptyIndexFinder(list,length, index + 1);
 }
 
 int main()
@@ -21,7 +21,7 @@ int main()
     float newGpa = 3.4;
 
 	int emptyIndex = 0;
-	emptyIndex = emptyIndex(gpas, numGPAS, 0);
+	emptyIndex = emptyIndexFinder(gpas, numGPAS, 0);
     if ( emptyIndex != -1 )
     {
         gpas[emptyIndex ] = newGpa;
